@@ -1,0 +1,32 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  color: var(--black);
+
+  font-family: "Noto Sans Display", sans-serif;
+}
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #3B434E;
+  --white: #FFF;
+  --primary: #7653FC;
+  --secondary: #787D85;
+  --success: #1DC37E;
+  --success-light: #C8F8E4;
+  --warning: #FC836D;
+  --grey: #B3C0D9;
+  --grey-light: #EBEBEB;
+  --bg: #F5F6F8;
+}

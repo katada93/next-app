@@ -1,0 +1,21 @@
+.large,
+.medium,
+.small {
+  margin: 0;
+
+  line-height: 24px;
+}
+
+.large {
+  font-size: 18px;
+
+  line-height: 29px;
+}
+
+.medium {
+  font-size: 16px;
+}
+
+.small {
+  font-size: 14px;
+}
