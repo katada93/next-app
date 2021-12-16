@@ -15,7 +15,15 @@ export default function Home(): JSX.Element {
       <Paragpaph size='large'>Paragpaph large</Paragpaph>
       <Paragpaph>Paragpaph medium</Paragpaph>
       <Paragpaph size='small'>Paragpaph small</Paragpaph>
-      <Tag>Tag component</Tag>
+      <Tag size='medium' color='warning'>
+        Tag medium component
+      </Tag>
+      <Tag color='grey'>Tag component</Tag>
+      <Tag size='medium'>Tag medium component</Tag>
+      <Tag color='primary' href='https://google.com'>
+        Tag component
+      </Tag>
+      <Tag color='success'>Tag component</Tag>
     </div>
   );
 }
