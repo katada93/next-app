@@ -7,12 +7,11 @@ export const Tag = ({
   href,
   size = 'small',
   color = 'ghost',
-  className,
   ...props
 }: TagProps): JSX.Element => {
   return (
     <span
-      className={cn(styles.tag, className, {
+      className={cn(styles.tag, {
         [styles.small]: size === 'small',
         [styles.medium]: size === 'medium',
         [styles.ghost]: color === 'ghost',

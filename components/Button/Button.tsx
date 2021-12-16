@@ -7,12 +7,11 @@ export const Button = ({
   appereance,
   children,
   arrow = 'none',
-  className,
   ...props
 }: ButtonProps): JSX.Element => {
   return (
     <button
-      className={cn(styles.btn, className, {
+      className={cn(styles.btn, {
         [styles.primary]: appereance === 'primary',
         [styles.ghost]: appereance === 'ghost',
       })}
