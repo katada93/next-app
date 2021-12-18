@@ -1,13 +1,13 @@
+import { useState, useEffect, KeyboardEvent } from 'react';
 import { RatingProps } from './Rating.props';
 import styles from './Rating.module.css';
-import StarIcon from './star.svg';
-import { KeyboardEvent, useEffect, useState } from 'react';
 import cn from 'classnames';
+import StarIcon from './star.svg';
 
 export const Rating = ({
+  isEditable = false,
   rating,
   setRating,
-  isEditable = false,
   ...props
 }: RatingProps): JSX.Element => {
   const [ratingArray, setRatingArray] = useState<JSX.Element[]>(
@@ -21,8 +21,8 @@ export const Rating = ({
           [styles.filled]: i < currentRating,
           [styles.editable]: isEditable,
         })}
-        onMouseEnter={() => changeDisplay(i + 1)}
-        onMouseLeave={() => changeDisplay(rating)}
+        onMouseEnter={() => handleHover(i + 1)}
+        onMouseLeave={() => handleHover(rating)}
         onClick={() => handleClick(i + 1)}
       >
         <StarIcon
@@ -35,14 +35,6 @@ export const Rating = ({
     ));
 
     setRatingArray(updatedArray);
-  };
-
-  const changeDisplay = (i: number) => {
-    if (!isEditable) {
-      return;
-    }
-
-    constructRating(i);
   };
 
   const handleClick = (i: number) => {
@@ -61,15 +53,25 @@ export const Rating = ({
     setRating(i);
   };
 
+  const handleHover = (i: number) => {
+    if (!isEditable) {
+      return;
+    }
+
+    constructRating(i);
+  };
+
   useEffect(() => {
     constructRating(rating);
   }, [rating]);
 
   return (
     <div {...props}>
-      {ratingArray.map((r, i) => (
-        <span key={i}>{r}</span>
-      ))}
+      {ratingArray.map(
+        (r: JSX.Element, i: number): JSX.Element => (
+          <span key={i}>{r}</span>
+        )
+      )}
     </div>
   );
 };
