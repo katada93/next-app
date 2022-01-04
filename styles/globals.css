@@ -20,6 +20,10 @@ a {
   padding: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 :root {
   --black: #3b434e;
   --white: #fff;

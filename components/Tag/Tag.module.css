@@ -21,14 +21,14 @@
 
 .warning {
   color: var(--white);
-  background-color: #DE0000;
+  background-color: #de0000;
 
   font-weight: bold;
 }
 
 .grey {
   color: var(--white);
-  background-color: #51648C;
+  background-color: #51648c;
 
   font-weight: bold;
 }
@@ -43,5 +43,4 @@
 .primary {
   color: var(--primary);
   border: 1px solid var(--primary);
-  background-color: none;
 }

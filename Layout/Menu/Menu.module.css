@@ -1,0 +1,74 @@
+.firstLevelItem {
+  margin-bottom: 20px;
+}
+
+.firstLevelLink {
+  color: var(--secondary);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.firstLevelActive,
+.firstLevelLink:hover {
+  color: var(--primary);
+}
+
+.firstLevelActive svg,
+.firstLevelLink:hover svg {
+  fill: var(--primary);
+}
+
+.secondLevel {
+  margin-top: 15px;
+  margin-left: 12px;
+
+  padding-top: 5px;
+  padding-left: 32px;
+
+  border-left: 2px solid #dfdfdf;
+}
+
+.secondLevelItem {
+  margin-bottom: 10px;
+}
+
+.secondLevelItem span {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  color: var(--secondary);
+}
+
+.thirdLevel {
+  margin-top: 13px;
+}
+
+.thirdLevel > li {
+  margin-bottom: 10px;
+}
+
+.thirdLevelOpened:last-child {
+  margin-bottom: 20px;
+}
+
+.thirdLevelLink {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: var(--secondary);
+}
+
+.thirdLevelActive,
+.thirdLevelLink:hover {
+  color: var(--primary);
+}
