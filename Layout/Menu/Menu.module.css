@@ -50,6 +50,11 @@
 
 .thirdLevel {
   margin-top: 13px;
+  display: none;
+}
+
+.thirdLevelOpened {
+  display: block;
 }
 
 .thirdLevel > li {
@@ -57,6 +62,7 @@
 }
 
 .thirdLevelOpened:last-child {
+  margin-top: 13px;
   margin-bottom: 20px;
 }
 
