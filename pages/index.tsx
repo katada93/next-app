@@ -30,6 +30,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
     process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find',
     { firstCategory }
   );
+
   return {
     props: {
       menu,
